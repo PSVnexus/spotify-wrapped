@@ -48,18 +48,7 @@ script.js            wrappedData config object + all interactivity
 assets/music/        Drop mp3 clips here to enable playlist previews (see its README)
 ```
 
-## Updating the content
 
-Everything under "My Year in Numbers," the Top 5 songs, and the Discord Wrapped section reads
-from the `wrappedData` object at the top of `script.js`. Change a value there and the relevant
-counters, cards, and slides update on the next page load — no need to touch the HTML.
-
-## Future improvements
-
-- Wire up real album art instead of the gradient placeholders
-- Add a light theme
-- Pull stats automatically from the Spotify API instead of hand-entering them each year
-- Mobile swipe gestures for the story slideshow (currently tap-zones only)
 
 ## Credits
 
