@@ -63,7 +63,7 @@ const wrappedData = {
       artist: "Yashraj, Dropped Out, Talwiinder",
       duration: "3:02",
       file: "Dhundhala-1-Downringtone.com.mp3",
-      art: "album-art-4",
+      art: "cover dhundhala.jpg",
       glow: "#ff007f",
       note: "My go-to whenever I needed a push — commutes, gym sessions, long to-do lists."
     },
