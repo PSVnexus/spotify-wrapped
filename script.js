@@ -1232,8 +1232,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
- document.getElementById('synth-play-toggle').addEventListener('click', () => {
-    getAudioEngine().toggle();
+ let soundLabMusic = new Audio("Dhundhala-1-Downringtone.com.mp3");
+  soundLabMusic.loop = true;
+  soundLabMusic.crossOrigin = "anonymous";
+  let mp3SourceNode = null;
+
+  document.getElementById('synth-play-toggle').addEventListener('click', () => {
+    const engine = getAudioEngine();
+    engine.init();
+
+    if (!mp3SourceNode) {
+      mp3SourceNode = engine.ctx.createMediaElementSource(soundLabMusic);
+      mp3SourceNode.connect(engine.filterNode);
+    }
+
+    if (engine.ctx.state === 'suspended') engine.ctx.resume();
+
+    if (soundLabMusic.paused) {
+      soundLabMusic.play();
+      engine.playing = true;
+      syncAudioButtonsUI(true);
+    } else {
+      soundLabMusic.pause();
+      engine.playing = false;
+      syncAudioButtonsUI(false);
+    }
   });
 
   /* ==========================================================================
