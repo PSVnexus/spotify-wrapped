@@ -1650,9 +1650,7 @@ document.addEventListener('DOMContentLoaded', () => {
      storyMusic = null;
     }
 
-      storyMusic.pause();
-      storyMusic.currentTime = 0;
-
+      
       const dock = document.getElementById('nav-dock');
       if (dock) dock.style.transform = 'translateX(-50%) translateY(0)';
       
