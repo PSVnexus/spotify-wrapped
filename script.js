@@ -1217,8 +1217,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Toggle events
+  // Background music for the nav "AUDIO ON/OFF" toggle — independent of the Sound Lab synth
+  let bgMusic = new Audio("Paro - Aditya Rikhari _ UNPLG'd _ Hindi.mp3");
+  bgMusic.loop = true;
+  bgMusic.volume = 0.5;
+
   document.getElementById('nav-audio-toggle').addEventListener('click', () => {
-    getAudioEngine().toggle();
+    if (bgMusic.paused) {
+      bgMusic.play();
+      syncAudioButtonsUI(true);
+    } else {
+      bgMusic.pause();
+      syncAudioButtonsUI(false);
+    }
   });
 
  document.getElementById('synth-play-toggle').addEventListener('click', () => {
