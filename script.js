@@ -1234,7 +1234,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
  let soundLabMusic = new Audio("Dhundhala-1-Downringtone.com.mp3");
   soundLabMusic.loop = true;
-  soundLabMusic.crossOrigin = "anonymous";
   let mp3SourceNode = null;
 
   document.getElementById('synth-play-toggle').addEventListener('click', () => {
